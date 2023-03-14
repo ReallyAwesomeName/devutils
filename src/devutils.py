@@ -3,19 +3,11 @@
 # TODO: CLI arguments for various files or file additions such as:
 # TODO: adding argparse skeleton to a file
 # TODO: make webapp directory structure with skeletons
+# TODO: insert header with license
 
-import templates
 import argparse
 
 
-def write_file(which, dir="./"):
-    """write <which> file to <dir> (default to CWD)"""
-    # TODO: allow providing relative path
-    try:
-        with open("reset.css", "x") as f:
-            f.write(templates.CSS_RESET_STRING)
-    except FileExistsError:
-        print("reset.css already exists in this directory.")
 
 
 def main():
