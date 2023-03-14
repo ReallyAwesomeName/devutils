@@ -28,14 +28,27 @@
 # ========================================================================== #
 
 
+from string import punctuation
 import templates
 
 
 def write_file(which, dir="./"):
     """write <which> file to <dir> (default to CWD)"""
-    # TODO: allow providing relative path
-    try:
-        with open("reset.css", "x") as f:
-            f.write(templates.CSS_RESET_STRING)
-    except FileExistsError:
-        print("reset.css already exists in this directory.")
+    # DEBUG: only writing to pycache instead of actually writing a new file
+    if (
+        which.lower().strip(punctuation).replace(" ", "").replace("-", "")
+        ) == "cssreset":
+        try:
+            if (".css" in dir):
+                #strip filename off if provided
+                i = dir.find(("/" or "\\"), -1)
+                dir = dir[:i]
+                print(dir)
+            with open(f"{dir}reset.css", "x") as f:
+                print(templates.CSS_RESET_STRING)
+                f.write(templates.CSS_RESET_STRING)
+        except FileExistsError:
+            print("reset.css already exists in this directory.")
+
+
+write_file("css_reset", "./reset.css")

@@ -5,13 +5,13 @@
 # TODO: make webapp directory structure with skeletons
 # TODO: insert header with license
 
+import tasks
 import argparse
-
-
 
 
 def main():
     """driver function for devutils"""
+    tasks.write_file("css_reset", "./reset.css")
     return
 
 
