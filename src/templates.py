@@ -31,7 +31,7 @@
 # TODO: make webapp directory structure with skeletons
 
 
-# NOTE: HTML_SKELETON, CSS_SKELETON, CSS_RESET_STRING, FILE_HEADER_PY_GNUV3,
+# NOTE: HTML_SKELETON, CSS_SKELETON, CSS_RESET_STRING, FILE_HEADER_PYTHON_GNUV3,
 
 HTML_SKELETON = (
     "<!DOCTYPE html>\n"
@@ -188,18 +188,18 @@ CSS_RESET_STRING = (
 
 # NOTE: Placeholders: <file_name.py>, <file_description>, <author_names>,
 # NOTE: <author_contacts>, <repo_name>, <project_name>, <current_year>
-FILE_HEADER_PY_GNUV3 = (
+FILE_HEADER_PYTHON_GNUV3 = (
     "#\n"
     "# <file_name.py>\n"
     "# desc: <file_description>\n"
     "#\n"
     "# Author: <author_names> | <author_contacts>\n"
-    "# https://github.com/ReallyAwesomeName/<repo_name>\n"
+    "# <link_to_repo>\n"
     "#\n"
     "# ========================================================================== #\n"
     "#                                                                            #\n"
     "#   <project_name> - <project_description>                                   #\n"
-    "#   Copyright (C) <current_year>  <author_names>                                       #\n"
+    "#   Copyright (C) <current_year>  <author_names>                             #\n"
     "#                                                                            #\n"
     "#   This file is a part of <project_name>                                    #\n"
     "#                                                                            #\n"
@@ -217,4 +217,27 @@ FILE_HEADER_PY_GNUV3 = (
     "#   along with this program.  If not, see <https://www.gnu.org/licenses/>.   #\n"
     "#                                                                            #\n"
     "# ========================================================================== #\n"
+)
+
+# TODO: finish these
+DIR_STRUCTURE_PYTHON_PROJECT = (
+    "<repo_name>/"
+    "----.gitignore"
+    "----COPYING"
+    "----main.py"
+    "----README.md"
+    "----src/"
+    "--------module.py"
+)
+
+DIR_STRUCTURE_JAVASCRIPT_WEBAPP = (
+    "<repo_name>/"
+    "----index.html"
+    "README.md"
+    "----assets/"
+    "--------css/"
+    "------------style.css"
+    "--------js/"
+    "------------script.js"
+    "--------img/"
 )
