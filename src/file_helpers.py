@@ -55,6 +55,7 @@ def write_file(fname, ftype, dir=curdir):
         case "html":
             THIS_TEMPLATE = templates.HTML_SKELETON
         case _:
+            # REVIEW: huh?
             raise ValueError(f"Extension {ftype} not supported")
 
     # write the file
@@ -85,7 +86,7 @@ def build_dir_structure(dir_structure, dir=curdir):
                 THIS_TEMPLATE = templates.DIR_STRUCTURE_PYTHON_PROJECT
             case _:
                 raise ValueError(f"Directory structure {dir_structure} not supported")
-    # review: huh?
+    # REVIEW: huh?
     except ValueError:
         return ValueError
 
